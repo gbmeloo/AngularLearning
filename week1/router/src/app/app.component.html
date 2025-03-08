@@ -1,0 +1,20 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="sidenavMode" opened="false" style="width: 150px; display: block;">
+    <button mat-button routerLink="/home" style="width: 100%;">Home</button>
+    <button mat-button routerLink="/about" style="width: 100%;">About</button>
+    <button mat-button routerLink="/contact" style="width: 100%;">Contact</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

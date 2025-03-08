@@ -1,0 +1,12 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media (max-width: 959.98px) {
+    mat-sidenav {
+      border-radius: 0;
+    }
+  }

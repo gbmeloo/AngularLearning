@@ -1,0 +1,17 @@
+<mat-card>
+    <h2>Add a Task</h2>
+    <form [formGroup]="todoForm" (ngSubmit)="addTask()">
+      <mat-form-field>
+        <input matInput formControlName="task" placeholder="Enter task" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Add</button>
+    </form>
+  </mat-card>
+  
+  <h2>Tasks</h2>
+  <div cdkDropList (cdkDropListDropped)="drop($event)" class="todo-list">
+    <div class="todo-item" *ngFor="let task of tasks" cdkDrag>
+      <mat-card>{{ task }}</mat-card>
+    </div>
+  </div>
+  

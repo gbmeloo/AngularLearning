@@ -1,0 +1,21 @@
+<p>Hello, {{ user.name | uppercase }}</p>
+<p [style.color]="fontColor">{{user.name}}</p>
+<input type="text" placeholder="type user name" [(ngModel)]="user.name" onchange="onSearch(this)">
+<div>
+    <input type="text" placeholder="Enter name" [(ngModel)]="newName">
+    <button (click)="addName()">Add</button>
+</div>
+
+<h1>For loop example</h1>
+<ul>
+    <li *ngFor="let name of names; index as i">{{ name }}
+        <button (click)="removeName(i)">Remove</button>
+    </li>
+</ul>
+
+<h1>Input/Output directives example</h1>
+<div>
+    <h2>Parent</h2>
+    <input type="text" placeholder="Enter item" [(ngModel)]="currentItem">
+    <app-item-description [item]="currentItem" (itemChange)="onItemChange($event)"></app-item-description>
+</div>
