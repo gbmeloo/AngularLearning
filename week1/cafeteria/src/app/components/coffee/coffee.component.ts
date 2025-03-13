@@ -10,10 +10,13 @@ import { MatRadioModule } from '@angular/material/radio';
   styleUrl: './coffee.component.css'
 })
 export class CoffeeComponent {
+  milkPrice: number = 1.0;
+  sugarPrice: number = 0.5;
   hotCoffee: boolean = false;
   milkCount: number = 0;
   sugarCount: number = 0;
   caffeine: boolean = false;
+  totalQty: number = 0;
 
   decreamentMilk() {
     this.milkCount > 0 ? this.milkCount-- : this.milkCount = 0;
